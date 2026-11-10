@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <title>Tut og Kjør - Medlemsregister</title>
+</head>
+<body>
+
+    <h1>velkommen til motorsykkel klub Tut og kjør</h1>
+
+    <nav>
+      <a href="/">Hjem (index)</a>
+      <a href="/contact">Kontakt</a>
+      <a href="/page">Min Side</a>
+    </nav>
+
+    <form action="/medlemmer" method="POST" class="mc-form">
+      <h2>Medlemsregistrering — Tut og kjør</h2>
+
+      <div class="form-group">
+        <label for="navn">Fullt navn:</label>
+        <input type="text" id="navn" name="navn" placeholder="Ola Nordmann" required />
+      </div>
+
+      <div class="form-group">
+        <label for="adresse">Adresse:</label>
+        <input type="text" id="adresse" name="adresse" placeholder="Storgata 1" required />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="postnr">Postnummer:</label>
+          <input type="text" id="postnr" name="postnr" pattern="[0-9]{4}" maxlength="4" placeholder="1540" required />
+        </div>
+        <div class="form-group">
+          <label for="poststed">Poststed:</label>
+          <input type="text" id="poststed" name="poststed" placeholder="Vestby" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="regnr">Registreringsnummer (MC):</label>
+        <input type="text" id="regnr" name="regnr" placeholder="AB 1234" required />
+      </div>
+
+      <div class="form-group">
+        <label for="mcType">MC Produsent:</label>
+        <select id="mcType" name="mcType" required>
+          <option value="" disabled selected>Velg produsent...</option>
+          <option value="Yamaha">Yamaha</option>
+          <option value="Honda">Honda</option>
+          <option value="BMW">BMW</option>
+          <option value="Harley-Davidson">Harley-Davidson</option>
+          <option value="Kawasaki">Kawasaki</option>
+          <option value="Suzuki">Suzuki</option>
+          <option value="KTM">KTM</option>
+          <option value="Annet">Annet</option>
+        </select>
+      </div>
+
+      <button type="submit">Registrer medlem</button>
+    </form>
+
+</body>
+</html>
